@@ -1,0 +1,79 @@
+<template>
+  <div class="flex flex-col md:m-10 m-4 bg-blue-50 p-2 space-y-4 min-h-screen">
+    <div v-if="cur_state">
+      {{ cur_state }}
+      -----------------
+      {{ this.temp }}
+      -----------------
+      {{ this.url }}
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 bg-white rounded-lg p-2">
+      <input  
+        @click="set_state('Url')"
+        tabindex="0"
+        type="text"
+        placeholder="http://your_url"
+        class="w-full bg-green-100 rounded-sm bg-slate-100 text-stone-500 focus:outline-2 focus:outline-blue-300 hover:outline-blue-300 col-span-2 sm:col-span-4"
+        v-model="url"
+      />
+
+      <div v-for="item in data" :key="item" class="col-span-1 sm:col-span-2">
+        <div
+          @click="set_state(item)"
+          tabindex="0"
+          :class="clas.option"
+        >
+          {{ item }}
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="col-span-1 sm:col-start-9 sm:col-span-2"
+        :class="clas.option"
+        :disabled="false"
+      >
+        Response
+      </button>
+
+      <div class="text-center bg-blue-400 text-white rounded-xl col-span-1 sm:col-start-11 sm:col-span-2">
+        Send
+      </div>
+    </div>
+
+    <div class="bg-white rounded-sm p-4">
+      <div class="text-sm bg-slate-100 border-b border-slate-500 px-5 py-2">
+        {{ cur_state }}
+      </div>
+
+      <textarea
+        v-if="cur_state != 'Params' && cur_state != 'Header' && cur_state != 'Url'"
+        class="border rounded-lg w-full min-h-[10rem] p-2 mt-3"
+        placeholder="input"
+        v-model="temp"
+      ></textarea>
+
+      <div v-if="cur_state == 'Params' || cur_state == 'Header'" class="grid grid-cols-1 gap-4 mt-4">
+        <div class="space-y-2">
+          <div class="flex gap-2">
+            <div class="flex-1 text-center bg-slate-200">key</div>
+            <div class="flex-1 text-center bg-slate-200">value</div>
+          </div>
+
+          <div v-if="this[this.cur_state].length > 0" v-for="(item, index) in this[this.cur_state]" :key="index" class="flex gap-2 items-center">
+            <div class="flex-1 text-center bg-slate-100 border-b border-slate-300">{{ item[0] }}</div>
+            <div class="flex-1 text-center bg-slate-100 border-b border-slate-300">{{ item[1] }}</div>
+            <button class="text-red-600" @click="del(index)">delete</button>
+          </div>
+
+          <div class="flex gap-2 items-center">
+            <input type="text" class="flex-1 bg-white outline p-1" placeholder="key" v-model="key" />
+            <input type="text" class="flex-1 bg-white outline p-1" placeholder="value" v-model="value" />
+            <div @click="add_l" class="px-3 py-1 bg-red-500 text-white rounded cursor-pointer">add</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
