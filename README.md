@@ -23,7 +23,8 @@ A developer-friendly Nuxt-based frontend tool for interacting with and testing A
 ### 📨 Handling the response
 ![Response](assets/response.png)
 
-### 📨 History of your request
+### 🕰️ History of your request
+
 ![History](assets/history.png)
 
 
