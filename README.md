@@ -1,75 +1,30 @@
-# Nuxt Minimal Starter
+# API Handler
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A developer-friendly Nuxt-based frontend tool for interacting with and testing API endpoints in real time. Designed for productivity, speed, and simplicity.
 
-## Setup
+## 🚀 Features
 
-Make sure to install dependencies:
+- Simple and clean UI using Tailwind CSS
+- Built with Nuxt.js and Vue.js
+- Enter and hit backend API URLs directly
+- Supports both all api requests
+- Displays formatted JSON responses
+- Helps developers test backend logic without Postman
+- Stores the history of api sended
+- View information about the api
+  
 
-```bash
-# npm
-npm install
+## 🧰 Tech Stack
 
-# pnpm
-pnpm install
+- Nuxt.js
+- Vue.js
+- Tailwind CSS
+- JavaScript
 
-# yarn
-yarn install
+## 🖥️ Setup and Installation
 
-# bun
-bun install
-```
+1. Clone the repository
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+bash
+git clone https://github.com/Bully26/api_handler.git
+cd api_handler
