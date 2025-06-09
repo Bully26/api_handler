@@ -12,7 +12,21 @@ A developer-friendly Nuxt-based frontend tool for interacting with and testing A
 - Helps developers test backend logic without Postman
 - Stores the history of api sended
 - View information about the api
-  
+
+## 📸 Screenshots
+
+### 🔍 GET Request in Action
+![GET Request](assets/get-request.png)
+
+---
+
+### 📨 Handling the response
+![Response](assets/response.png)
+
+### 📨 History of your request
+![History](assets/history.png)
+
+
 
 ## 🧰 Tech Stack
 
