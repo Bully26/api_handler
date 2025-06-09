@@ -10,6 +10,9 @@ A developer-friendly Nuxt-based frontend tool for interacting with and testing A
 - Supports both all api requests
 - Displays formatted JSON responses
 - Helps developers test backend logic without Postman
+- Stores the history of api sended
+- View information about the api
+  
 
 ## 🧰 Tech Stack
 
